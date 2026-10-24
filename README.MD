@@ -12,6 +12,34 @@
   RAG and human-in-the-loop guardrails on AWS Bedrock — while leading teams and staying hands-on in <b>Go</b> and <b>Python</b>.
 </p>
 
+<h3 align="center">Domains I've shipped in</h3>
+
+<div align="center">
+<table>
+  <tr>
+    <th>💼 Career</th>
+    <th>🚀 Personal products</th>
+  </tr>
+  <tr>
+    <td valign="top">
+      🌐 <b>Fintech · blockchain remittance</b> — ScopeX <sub>(USDC / EURC on Stellar &amp; Polygon)</sub><br>
+      💳 <b>Payments</b> — Paylo payment gateway <sub>(Immortal Technologies)</sub><br>
+      🚚 <b>Logistics</b> — Shiprocket<br>
+      🎮 <b>Real-money gaming</b> — QuizyGames<br>
+      🛩️ <b>Drones / UAV</b> — ideaForge<br>
+      🏥 <b>Health-tech</b> — Medzipp <sub>(co-founder)</sub><br>
+      🤖 <b>Robotics &amp; IoT</b> — Milagrow HumanTech
+    </td>
+    <td valign="top">
+      🛡️ <b>AI security</b> — <a href="https://openrouting.si">OpenRouting</a><br>
+      <sub>SAST + secrets scanning, Claude triage, MCP server</sub><br><br>
+      📈 <b>SEO / AEO analytics</b> — <a href="https://isaeo.com">isaeo</a><br>
+      <sub>AI-search readiness scoring for agencies</sub>
+    </td>
+  </tr>
+</table>
+</div>
+
 ---
 
 ## 🧭 At a glance
@@ -19,8 +47,8 @@
 | | |
 |---|---|
 | **Role** | Engineering Manager — backend, infrastructure, AI platform and delivery |
-| **Experience** | 10+ years across fintech &amp; payments, logistics, real-money gaming, drones and robotics, plus a co-founder stint |
-| **Focus** | Agentic AI · Model Context Protocol · RAG · LLM evals · secure AI tooling |
+| **Experience** | 10+ years across fintech (blockchain remittance, payment gateway), logistics, real-money gaming, drones, robotics and IoT, plus a co-founder stint |
+| **Focus** | Agentic AI · Model Context Protocol · RAG &amp; vector search · LLM evals · secure AI tooling |
 | **Location** | Gurugram, India |
 
 ---
@@ -68,9 +96,10 @@ flowchart LR
 
 | System | What it does | Tech |
 |---|---|---|
-| **Agentic ops platform** (fintech) | Agents monitor payout health, investigate incidents through MCP tools and execute remediation — retry, provider switch, bulk payout — behind a policy engine that requires human approval | Bedrock · MCP · DBOS durable workflows · event-sourced audit · LLM-as-judge |
-| **RAG support agent** (fintech) | Customer-facing answers from a curated knowledge base with per-answer confidence scoring and automatic human escalation; ops console for ingestion and session review | RAG · Bedrock · confidence scoring · escalation analytics |
+| **Agentic ops platform** (blockchain remittance fintech) | Agents monitor payout health, investigate incidents through MCP tools and execute remediation — retry, provider switch, bulk payout — behind a policy engine that requires human approval | Bedrock · MCP · DBOS durable workflows · event-sourced audit · LLM-as-judge |
+| **RAG support agent** (blockchain remittance fintech) | Customer-facing answers from a curated knowledge base with per-answer confidence scoring and automatic human escalation; ops console for ingestion and session review | RAG · **Pinecone** · Bedrock · confidence scoring · escalation analytics |
 | **Logistics MCP server** | 240+ platform APIs exposed as LLM-callable tools so developers and AI agents can integrate shipping directly | Go · Model Context Protocol |
+| **Semantic search** (logistics) | Embedding-based vector search across logistics platform data | **Pinecone** · **pgvector** (Postgres) |
 
 <sub>Company code lives in private repositories — happy to walk through the architecture in a conversation.</sub>
 
@@ -78,17 +107,15 @@ flowchart LR
 
 ## 🗺️ Career path
 
-| Company | Domain | Role | Years |
-|---|---|---|---|
-| [ScopeX Money](https://scopex.money) | Stablecoin cross-border remittance | Engineering Manager | 2026 – now |
-| [Shiprocket](https://shiprocket.in) | E-commerce logistics | Technical Lead | 2023 – 2026 |
-| [QuizyGames](https://quizygames.com) | Real-money gaming | Core Team Member — Engineering | 2021 – 2022 |
-| Immortal Technologies | Cloud web platforms | Senior Software Engineer | 2019 – 2020 |
-| [ideaForge](https://ideaforge.com) | Drones / UAV | Technical Consultant | 2018 – 2019 |
-| Medzipp | Health-tech | Co-Founder | 2017 – 2018 |
-| [Milagrow HumanTech](https://milagrowhumantech.com) | Consumer robotics | Software Engineer | 2016 – 2017 |
-
-**Domains I've shipped in:** 💸 fintech &amp; payments (ScopeX, Paylo payment gateway) · 🚚 logistics · 🎮 real-money gaming · 🛩️ drones · 🤖 robotics · 🏥 health-tech
+| Company | Domain | Role | Period | Duration |
+|---|---|---|---|---|
+| [ScopeX Money](https://scopex.money) | Fintech — blockchain cross-border remittance (USDC / EURC on Stellar &amp; Polygon) | Engineering Manager | Jul 2026 – Present | 4 mos |
+| [Shiprocket](https://shiprocket.in) | E-commerce logistics | Technical Lead | Jan 2023 – Jul 2026 | 3 yrs 7 mos |
+| [QuizyGames](https://quizygames.com) | Real-money gaming | Head of Engineering | Apr 2021 – Dec 2022 | 1 yr 9 mos |
+| Immortal Technologies — **Paylo** | Payment gateway | Senior Software Engineer | Jul 2019 – Oct 2020 | 1 yr 4 mos |
+| [ideaForge](https://ideaforge.com) | Drones / UAV | Technical Consultant | Sep 2018 – Jul 2019 | 11 mos |
+| Medzipp | Health-tech | Co-Founder | Apr 2017 – Aug 2018 | 1 yr 5 mos |
+| [Milagrow HumanTech](https://milagrowhumantech.com) | Consumer robotics &amp; IoT | Software Engineer | Apr 2016 – Mar 2017 | 1 yr |
 
 ---
 
@@ -99,35 +126,47 @@ flowchart LR
 ![AWS Bedrock](https://img.shields.io/badge/AWS%20Bedrock-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white)
 ![MCP](https://img.shields.io/badge/Model%20Context%20Protocol-000000?style=flat-square)
 ![RAG](https://img.shields.io/badge/RAG-4B5563?style=flat-square)
+![Pinecone](https://img.shields.io/badge/Pinecone-vector%20DB-000000?style=flat-square)
+![pgvector](https://img.shields.io/badge/pgvector-Postgres-4169E1?style=flat-square&logo=postgresql&logoColor=white)
 ![DBOS](https://img.shields.io/badge/DBOS-durable%20workflows-4B5563?style=flat-square)
 ![Vercel AI SDK](https://img.shields.io/badge/Vercel%20AI%20SDK-000000?style=flat-square&logo=vercel&logoColor=white)
 
-**Languages**<br>
-![Go](https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white)
+### Languages &amp; frameworks
 
-**Backend &amp; Data**<br>
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
-![Django](https://img.shields.io/badge/Django-092E20?style=flat-square&logo=django&logoColor=white)
-![Flask](https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white)
-![gRPC](https://img.shields.io/badge/gRPC-244c5a?style=flat-square)
+| Language | Frameworks &amp; libraries | Where I've used it |
+|---|---|---|
+| ![Go](https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white) | gRPC · REST microservices · MCP server | Scalable services at Shiprocket &amp; ScopeX, Shiprocket MCP server, QuizyGames |
+| ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) | FastAPI · Django · Flask · Celery · Pydantic · Anthropic SDK · Playwright | AI &amp; data engineering at Shiprocket, QuizyGames, OpenRouting, isaeo |
+| ![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white) | Laravel | Shiprocket core application |
+| ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white) | Next.js · React · Vercel AI SDK | OpenRouting dashboard &amp; site, AI tooling |
+| ![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white) | MySQL · PostgreSQL · pgvector | Transactional data, CDC, vector search |
+| ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white) | — | Early career |
+
+**Data, messaging &amp; storage**<br>
 ![Kafka](https://img.shields.io/badge/Kafka-231F20?style=flat-square&logo=apachekafka&logoColor=white)
-![Celery](https://img.shields.io/badge/Celery-37814A?style=flat-square&logo=celery&logoColor=white)
+![SQS](https://img.shields.io/badge/SQS-FF4F8B?style=flat-square&logo=amazonsqs&logoColor=white)
+![RabbitMQ](https://img.shields.io/badge/RabbitMQ-FF6600?style=flat-square&logo=rabbitmq&logoColor=white)
+![Debezium](https://img.shields.io/badge/Debezium%20CDC-91D443?style=flat-square)
 ![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
-![Debezium](https://img.shields.io/badge/Debezium%20CDC-91D443?style=flat-square)
+![DynamoDB](https://img.shields.io/badge/DynamoDB-4053D6?style=flat-square&logo=amazondynamodb&logoColor=white)
 
 **Cloud &amp; Ops**<br>
 ![AWS](https://img.shields.io/badge/AWS-ECS%20%C2%B7%20Lambda%20%C2%B7%20EventBridge%20%C2%B7%20SQS-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
-![Datadog](https://img.shields.io/badge/Datadog-632CA6?style=flat-square&logo=datadog&logoColor=white)
-![Grafana](https://img.shields.io/badge/Grafana-F46800?style=flat-square&logo=grafana&logoColor=white)
 ![Nginx](https://img.shields.io/badge/Nginx-009639?style=flat-square&logo=nginx&logoColor=white)
 ![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=flat-square&logo=cloudflare&logoColor=white)
+
+
+**Observability — logs &amp; APM**<br>
+![Datadog](https://img.shields.io/badge/Datadog-APM%20%C2%B7%20Logs-632CA6?style=flat-square&logo=datadog&logoColor=white)
+![Elasticsearch](https://img.shields.io/badge/Elasticsearch-005571?style=flat-square&logo=elasticsearch&logoColor=white)
+![Logstash](https://img.shields.io/badge/Logstash-005571?style=flat-square&logo=logstash&logoColor=white)
+![Kibana](https://img.shields.io/badge/Kibana-005571?style=flat-square&logo=kibana&logoColor=white)
+![Grafana](https://img.shields.io/badge/Grafana-F46800?style=flat-square&logo=grafana&logoColor=white)
+![Metabase](https://img.shields.io/badge/Metabase-509EE3?style=flat-square&logo=metabase&logoColor=white)
 
 ---
 
