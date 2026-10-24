@@ -21,6 +21,6 @@ teams and staying hands-on in Go and Python.
 **Backend & Cloud:** Microservices · gRPC · Kafka · SQS · Debezium CDC · Postgres · MongoDB · AWS (ECS Fargate, Lambda, EventBridge) · Docker · Datadog
 
 ### 📫 Reach me
-[LinkedIn](https://linkedin.com/in/mrkishorpant) · mr.kishorpant26@gmail.com
+[LinkedIn](https://linkedin.com/in/mrkishorpant) · kishor@techtalkbyte.xyz  · https://techtalkbyte.xyz
 
 <sub>Most of my work lives in private company repositories — happy to walk through the architecture in a conversation.</sub>
