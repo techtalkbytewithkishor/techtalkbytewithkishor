@@ -19,7 +19,7 @@
 | | |
 |---|---|
 | **Role** | Engineering Manager — backend, infrastructure, AI platform and delivery |
-| **Experience** | 10+ years across fintech, logistics and e-commerce, plus a co-founder stint |
+| **Experience** | 10+ years across fintech &amp; payments, logistics, real-money gaming, drones and robotics, plus a co-founder stint |
 | **Focus** | Agentic AI · Model Context Protocol · RAG · LLM evals · secure AI tooling |
 | **Location** | Gurugram, India |
 
@@ -73,6 +73,22 @@ flowchart LR
 | **Logistics MCP server** | 240+ platform APIs exposed as LLM-callable tools so developers and AI agents can integrate shipping directly | Go · Model Context Protocol |
 
 <sub>Company code lives in private repositories — happy to walk through the architecture in a conversation.</sub>
+
+---
+
+## 🗺️ Career path
+
+| Company | Domain | Role | Years |
+|---|---|---|---|
+| [ScopeX Money](https://scopex.money) | Stablecoin cross-border remittance | Engineering Manager | 2026 – now |
+| [Shiprocket](https://shiprocket.in) | E-commerce logistics | Technical Lead | 2023 – 2026 |
+| [QuizyGames](https://quizygames.com) | Real-money gaming | Core Team Member — Engineering | 2021 – 2022 |
+| Immortal Technologies | Cloud web platforms | Senior Software Engineer | 2019 – 2020 |
+| [ideaForge](https://ideaforge.com) | Drones / UAV | Technical Consultant | 2018 – 2019 |
+| Medzipp | Health-tech | Co-Founder | 2017 – 2018 |
+| [Milagrow HumanTech](https://milagrowhumantech.com) | Consumer robotics | Software Engineer | 2016 – 2017 |
+
+**Domains I've shipped in:** 💸 fintech &amp; payments (ScopeX, Paylo payment gateway) · 🚚 logistics · 🎮 real-money gaming · 🛩️ drones · 🤖 robotics · 🏥 health-tech
 
 ---
 
